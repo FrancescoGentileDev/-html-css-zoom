@@ -7,6 +7,7 @@
   body {
     line-height: 1.2;
     background-color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
   }
   body::-webkit-scrollbar {
       display: none;
@@ -30,6 +31,10 @@
   
   .wrap {
       flex-wrap: wrap;
+  }
+
+  .grow {
+    flex-grow: 1;
   }
   .white {
     color: #fff;
@@ -77,8 +82,8 @@
       color: white;
   }
   .green {
-      background-color: green;
-      color: white;
+      color: green;
+      
   }
   
   /*#endregion UTILITIES */
@@ -93,7 +98,6 @@
 .fa-solid::before{
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  margin-right: 3px;
 }
 /*#endregion Fix fontAwesome font*****/
 
@@ -102,7 +106,13 @@
 
   /*#region Header *****/
 
-  header i {
+  header {
+    position: fixed;
+    right: 0;
+    z-index: 1;
+  }
+
+  header i,header p {
     background-color: rgba(128, 128, 128, 0.35);
     margin: 10px;
     padding: 5px;
@@ -114,12 +124,12 @@
   /*#region grid*****/
 
   main {
-    padding: 30px 0;
+    padding-top: 50px;
+    padding-bottom: 120px
 
   }
 
   #grid-container {
-    height: 100vh;
     column-gap: 10px;
     align-content: flex-start;
   }
@@ -129,18 +139,20 @@
 
   /*#region Gestione immagini*****/
     #grid-container > section {
-    width: calc(100% / 4 - 10px);
+    width: calc(100% / 7 - 10px);
     margin-top: 10px;
   }
   section > img {
     width: 100%;
-    height: auto;
+    height: var(width);
+    aspect-ratio: 16/13;
   }
 
   #nick {
     background-color: #000000a4;
     position: absolute;
-    bottom: 1px;
+    bottom: 6px;
+    left: 2px;
     padding: 3px;
     border-radius: 5px;
     font-size: 0.8rem;
@@ -151,3 +163,34 @@
 
 
   /*#endregion grid*****/
+
+  /*#region navigation*****/
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    z-index: 1;
+    
+    background-color: #23272a;
+
+  }
+
+  nav i {
+    font-size: 3.5vh;
+    line-height: 0;
+    vertical-align: bottom;
+  }
+
+  #builder > div > .col {
+    margin: 10px
+  }
+
+  #end-meet {
+    background-color: red;
+    margin: 20px 10px;
+    padding: 0 8px;
+    border-radius: 10px;
+
+  }
+  /*#endregion navigation*****/
