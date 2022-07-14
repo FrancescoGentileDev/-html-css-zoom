@@ -68,7 +68,7 @@
   }
   
   .container {
-      max-width: 1200px;
+      max-width: calc(100vw - 40px);
       margin: 0 auto;
   }
   
@@ -84,7 +84,7 @@
   /*#endregion UTILITIES */
   
 
-  /***** Header *****/
+  /*#region Header *****/
   .fa-grip{
     font-family: sans-serif;
     font-weight: normal;
@@ -100,4 +100,27 @@
     padding: 5px;
     border-radius: 3px
   }
-  /***** End Header *****/  
+  /*#endregion End Header *****/  
+
+  /*#region grid*****/
+
+  main {
+    padding: 30px 0;
+
+  }
+
+  #grid-container {
+    height: 100vh;
+    column-gap: 10px;
+    align-content: flex-start;
+  }
+  #grid-container > section {
+    width: calc(100% / 7 - 10px);
+    margin-top: 10px;
+  }
+  section > img {
+    width: 100%;
+    height: auto;
+  }
+
+  /*#endregion grid*****/
