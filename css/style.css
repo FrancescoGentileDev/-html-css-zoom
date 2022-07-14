@@ -83,18 +83,26 @@
   
   /*#endregion UTILITIES */
   
+/*#region General*****/
+
+/*#region Fix fontAwesome font*****/
+.fa-solid {
+  font-family: sans-serif;
+  font-weight: normal;
+}  
+.fa-solid::before{
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 3px;
+}
+/*#endregion Fix fontAwesome font*****/
+
+/*#endregion General*****/
+
 
   /*#region Header *****/
-  .fa-grip{
-    font-family: sans-serif;
-    font-weight: normal;
-  }  
-  .fa-grip::before{
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    margin-right: 3px;
-  }
-  nav > i {
+
+  header i {
     background-color: rgba(128, 128, 128, 0.35);
     margin: 10px;
     padding: 5px;
@@ -102,6 +110,7 @@
   }
   /*#endregion End Header *****/  
 
+  
   /*#region grid*****/
 
   main {
@@ -114,13 +123,31 @@
     column-gap: 10px;
     align-content: flex-start;
   }
-  #grid-container > section {
-    width: calc(100% / 7 - 10px);
+  section {
+    position: relative;
+  }
+
+  /*#region Gestione immagini*****/
+    #grid-container > section {
+    width: calc(100% / 4 - 10px);
     margin-top: 10px;
   }
   section > img {
     width: 100%;
     height: auto;
   }
+
+  #nick {
+    background-color: #000000a4;
+    position: absolute;
+    bottom: 1px;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+
+  /*#endregion Gestione immagini*****/
+
+
 
   /*#endregion grid*****/
