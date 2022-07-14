@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    line-height: 1.2;
+    background-color: rgb(0, 0, 0);
+  }
+  body::-webkit-scrollbar {
+      display: none;
+  }
+  
+  /*#region UTILITIES */
+  
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .wrap {
+      flex-wrap: wrap;
+  }
+  .white {
+    color: #fff;
+  }
+  
+  .black {
+    background-color: #23272a !important;
+    color: white !important;
+  }
+  
+  .fontlarge {
+    color: #23272a;
+    font-size: 28px;
+  }
+  
+  .align-center {
+    align-items: center;
+    
+  }
+
+  .flex-center {
+    justify-content: center;
+  }
+  
+  .flex-end {
+    justify-content: flex-end;
+  }
+
+
+  .flex-around {
+      justify-content: space-around;
+  }
+  
+  .flex-between {
+      justify-content: space-between;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  .red {
+      background-color: red;
+      color: white;
+  }
+  .green {
+      background-color: green;
+      color: white;
+  }
+  
+  /*#endregion UTILITIES */
+  
+
+  /***** Header *****/
+  .fa-grip{
+    font-family: sans-serif;
+    font-weight: normal;
+  }  
+  .fa-grip::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 3px;
+  }
+  nav > i {
+    background-color: rgba(128, 128, 128, 0.35);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 3px
+  }
+  /***** End Header *****/  
