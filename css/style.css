@@ -8,6 +8,8 @@
     line-height: 1.2;
     background-color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
+    counter-reset: section 1;
+    overflow: hidden;
   }
   body::-webkit-scrollbar {
       display: none;
@@ -101,6 +103,15 @@
 }
 /*#endregion Fix fontAwesome font*****/
 
+button {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+
+
+
 /*#endregion General*****/
 
 
@@ -112,40 +123,65 @@
     z-index: 1;
   }
 
-  header i,header p {
+  header a {
+    text-decoration: none;
+    color: white; 
     background-color: rgba(128, 128, 128, 0.35);
     margin: 10px;
     padding: 5px;
     border-radius: 3px
   }
+
+  header a:hover {
+    background-color: rgba(255, 255, 255, 0.50);
+    color: black;
+  }
+  header a:focus-within {
+    background-color: rgba(255, 255, 255, 0.50);
+    color: black;
+  }
+
   /*#endregion End Header *****/  
 
   
   /*#region grid*****/
 
   main {
+    position: relative;
     padding-top: 50px;
-    padding-bottom: 120px
+    height: 90vh;
+  }
+
+
+  #grid-container {
+    
+    column-gap: 10px;
+    height: 90vh;
+    align-content: flex-start;
+    overflow: auto;
+    margin-bottom: 20px;
 
   }
 
-  #grid-container {
-    column-gap: 10px;
-    align-content: flex-start;
+  #grid-container::-webkit-scrollbar {
+      display: none;
   }
   section {
     position: relative;
   }
 
+
   /*#region Gestione immagini*****/
     #grid-container > section {
     width: calc(100% / 7 - 10px);
+    max-width: 100%;
+    min-width: 200px ;
     margin-top: 10px;
   }
   section > img {
     width: 100%;
     height: var(width);
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
   }
 
   #nick {
@@ -159,8 +195,6 @@
   }
 
   /*#endregion Gestione immagini*****/
-
-
 
   /*#endregion grid*****/
 
@@ -177,7 +211,7 @@
   }
 
   nav i {
-    font-size: 3.5vh;
+    font-size: 3vh;
     line-height: 0;
     vertical-align: bottom;
   }
@@ -193,4 +227,23 @@
     border-radius: 10px;
 
   }
+  #builder a {
+    text-decoration: none;
+    color: white;
+  }
+  #builder > div > button {
+    padding: 5px;
+    user-select: none;
+  }
+  #builder > div > button:hover{
+    box-shadow: rgba(0, 0, 0, 0.308) 0px 0px 10px;
+  }
+  #builder > div > button:focus{
+    box-shadow: rgba(0, 0, 0, 0.753) 0px 0px 10px;
+  }
+
+  #end-meet:hover {
+    background-color: rgb(150, 0, 0);
+  }
+
   /*#endregion navigation*****/
